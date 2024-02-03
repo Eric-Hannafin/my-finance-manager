@@ -18,7 +18,7 @@ function Transactions() {
     return (
         <div className="transactions-container">
             <h2>Transactions</h2>
-            <table className='transaction-table'>
+            <table className='transactions-table'>
                 <thead>
                     <tr>
                         <th>Type</th>
@@ -30,10 +30,10 @@ function Transactions() {
                 <tbody>
                     {transactions.map((transaction) => (
                         <tr key={transaction.id}>
-                            <td>{transaction.type}</td>
-                            <td>{transaction.amount}</td>
-                            <td>{transaction.transaction_Date}</td>
-                            <td>{transaction.description}</td>
+                            <td data-label="Type">{transaction.type}</td>
+                            <td data-label="Amount">{transaction.amount}</td>
+                            <td data-label="Transaction Date">{transaction.transaction_Date}</td>
+                            <td data-label="Description">{transaction.description}</td>
                         </tr>
                     ))}
                 </tbody>

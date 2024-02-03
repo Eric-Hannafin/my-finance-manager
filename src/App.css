@@ -1,10 +1,6 @@
 .App {
+  background-color: #bbbcbd;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,14 +10,12 @@
 }
 
 .App-header {
-  background-color: #353a46;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: top;
+  font-size: calc(1px + 2vmin);
+  color: #353a46;
 }
 
 .App-link {
@@ -35,4 +29,34 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-nav {
+  background: #353a46;
+  font-size: 15px;
+  width: 100%;
+  font-weight: bold;
+  display: flex;
+  align-items: left;
+}
+
+.App-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.3rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.App-nav a:hover {
+  background-color: #34495e;
+}
+
+.App-title {
+  text-align: left;
+  font-size: 25px;
+  margin-top: 0;
+  color: #353a46;
+  margin-top: 2%;
+  margin-left: 1%;
 }
