@@ -17,7 +17,7 @@ function App() {
             <Link to="/reports">Reports</Link>
           </nav>
         </header>
-        <h1 className="App-title">Dashboard</h1>
+        <h1 className="App-title">My Personal Finance Dashboard</h1>
         <Current_savings />
         <Routes>
           <Route path="/transactions" element={<Transactions />} />
