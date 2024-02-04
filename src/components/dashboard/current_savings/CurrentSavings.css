@@ -12,6 +12,7 @@
 .h4-heading {
   color: #34495e;
   text-align: left;
+  font-size: 2vh;
   margin-top: 2%;
   margin-left: 2%;
 }
@@ -19,5 +20,5 @@
 .test {
   color: #34495e;
   margin-top: 5vh;
-  font-size: 75px;
+  font-size: 70px;
 }

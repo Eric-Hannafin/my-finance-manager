@@ -1,15 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import './Transactions.css'
+import './Transactions.css';
+
+// Define the shape of the data with an interface
+interface Transaction {
+    id: number;
+    type: string;
+    amount: string; // Assuming amount is a string; adjust if it's actually a number
+    transaction_Date: string;
+    description: string;
+}
 
 function Transactions() {
-    const [transactions, setTransactions] = useState([]);
+    // Use the interface to type the state
+    const [transactions, setTransactions] = useState < Transaction[] > ([]);
 
     useEffect(() => {
         fetch('http://localhost:8080/transactions')
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
+            .then((response) => response.json())
+            .then((data: Transaction[]) => { // Type the response data as an array of Transactions
                 setTransactions(data);
             })
             .catch(error => console.error("There was an error!", error));
@@ -41,6 +49,5 @@ function Transactions() {
         </div>
     );
 }
-
 
 export default Transactions;
