@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Transactions from './components/transactions/Transactions';
-import Current_savings from './components/dashboard/current_savings/Current_savings';
+import CurrentSavings from './components/dashboard/current_savings/CurrentSavings';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
           </nav>
         </header>
         <h1 className="App-title">My Personal Finance Dashboard</h1>
-        <Current_savings />
+        <CurrentSavings />
         <Routes>
           <Route path="/transactions" element={<Transactions />} />
         </Routes>
