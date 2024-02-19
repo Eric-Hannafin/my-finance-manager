@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./CurrentSavings.css";
+import "./CurrentSaving.css";
 
 interface Transaction {
   amount: string;
 }
 
-const CurrentSavings: React.FC = () => {
+const CurrentSaving: React.FC = () => {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [totalAmount, setTotalAmount] = useState<number>(0);
 
@@ -33,4 +33,4 @@ const CurrentSavings: React.FC = () => {
   );
 };
 
-export default CurrentSavings;
+export default CurrentSaving;

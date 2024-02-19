@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
-import Transactions from './components/transactions/Transactions';
-import CurrentSavings from './components/dashboard/current_savings/CurrentSavings';
+import Login from './components/login/Login'
+import Transaction from './components/transactions/Transaction';
+import CurrentSaving from './components/dashboard/currentSaving/CurrentSaving';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
+      <Login />
       <div className="App">
         <header className="App-header">
           <nav className="App-nav">
@@ -18,9 +20,9 @@ function App() {
           </nav>
         </header>
         <h1 className="App-title">My Personal Finance Dashboard</h1>
-        <CurrentSavings />
+        <CurrentSaving />
         <Routes>
-          <Route path="/transactions" element={<Transactions />} />
+          <Route path="/transactions" element={<Transaction />} />
         </Routes>
       </div>
     </Router>
