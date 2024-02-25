@@ -13,6 +13,7 @@ const Login: React.FC = () => {
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    // TODO: Add call to backend
     event.preventDefault();
     console.log(credentials);
   };
