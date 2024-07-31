@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "./AuthContext";
+import { useAuth } from "../auth/AuthContext";
 import "./Login.css";
 
 interface Credentials {
@@ -39,7 +39,7 @@ const Login: React.FC = () => {
       const token = await response.text();
       console.log("Login successful:", token);
       localStorage.setItem("token", token);
-      login(); // Updates authentication state
+      login();
       navigate("/transactions");
     } catch (error) {
       console.error("Error during login:", error);
@@ -47,34 +47,39 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="login-container">
-      <form className="login-form" onSubmit={handleSubmit}>
-        <h2>Sign In</h2>
-        <div className="form-group">
-          <label htmlFor="usernameOrEmail">Username</label>
-          <input
-            id="usernameOrEmail"
-            name="usernameOrEmail"
-            type="text"
-            value={credentials.usernameOrEmail}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            value={credentials.password}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit">Login</button>
-        <button type="submit">Register</button>
-      </form>
+    <div className="login-page">
+      <div className="image-container">
+        <img src="../../logo512.png" alt="Your Description" />
+      </div>
+      <div className="login-form-container">
+        <form className="login-form" onSubmit={handleSubmit}>
+          <h2>Sign In</h2>
+          <div className="form-group">
+            <label htmlFor="usernameOrEmail">Username</label>
+            <input
+              id="usernameOrEmail"
+              name="usernameOrEmail"
+              type="text"
+              value={credentials.usernameOrEmail}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              value={credentials.password}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <button type="submit">Login</button>
+          <button type="submit">Register</button>
+        </form>
+      </div>
     </div>
   );
 };

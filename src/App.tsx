@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { AuthProvider, useAuth } from "./components/login/AuthContext";
+import { AuthProvider, useAuth } from "./components/auth/AuthContext";
 import Login from "./components/login/Login";
 import Transaction from "./components/transactions/Transaction";
 import CurrentSaving from "./components/dashboard/currentSaving/CurrentSaving";
@@ -40,7 +40,6 @@ const AuthContent: React.FC = () => {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/transactions" element={<Transaction />} />
-        {/* Other routes */}
       </Routes>
       {isAuthenticated && <CurrentSaving />}
     </>
