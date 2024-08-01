@@ -27,7 +27,7 @@ const CurrentSaving: React.FC = () => {
     <div className="current-savings">
       <h4 className="h4-heading">Current Balance</h4>
       <div className="total-amount">
-        <p className="test">€{totalAmount.toFixed(2)}</p>
+        <p className="amount">€{totalAmount.toFixed(2)}</p>
       </div>
     </div>
   );

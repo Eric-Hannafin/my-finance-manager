@@ -3,12 +3,6 @@
   text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   display: flex;
   flex-direction: column;
@@ -32,16 +26,17 @@
 }
 
 .App-nav {
-  background: #353a46;
+  background: rgba(47, 52, 63, 0.568);
   font-size: 15px;
   width: 100%;
+  height: 10%;
   font-weight: bold;
   display: flex;
   align-items: left;
 }
 
 .App-nav a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 0.5rem 0.3rem;
   border-radius: 4px;

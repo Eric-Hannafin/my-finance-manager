@@ -39,7 +39,7 @@ const Login: React.FC = () => {
       const token = await response.text();
       console.log("Login successful:", token);
       localStorage.setItem("token", token);
-      login();
+      login(token);
       navigate("/transactions");
     } catch (error) {
       console.error("Error during login:", error);
